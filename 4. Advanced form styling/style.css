@@ -1,0 +1,40 @@
+#form1 input{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+#form2 span{
+    display: inline-block;
+    background:red;
+}
+
+#form2 input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance:none;
+    position:relative;
+    width:1em;
+    height:1em;
+    border:1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align:-2px;
+    color:green;
+}
+
+#form2 input[type=checkbox]::before{
+    content:"✔";
+    position:absolute;
+    font-size: 1.2em;
+    right:-1px;
+    top:-0.3em;
+    visibility:hidden;
+}
+
+#form2 input[type=checkbox]:checked::before{
+    visibility:visible;
+}
+
+#form2 input[type=checkbox]:disabled{
+    border-color:black;
+    background:#ddd;
+    color:gray;
+}
