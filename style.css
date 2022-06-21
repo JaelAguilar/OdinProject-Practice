@@ -41,7 +41,7 @@ body{
     margin:0 0 40px 0;
 }
 
-/*Text input*/
+/*Text and email input*/
 .form-row{
     margin-bottom:40px;
     display:flex;
@@ -59,6 +59,13 @@ body{
 }
 .form-row label{
     margin-bottom:15px;
+}
+
+/*Input validation*/
+.form-row input[type=text]:invalid,.form-row input[type=email]:invalid{
+    border:1px solid #d55c5f;
+    color:#d55c5f;
+    box-shadow:none; /*Remove default from Firefox*/
 }
 
 /*Create desktop layout*/
