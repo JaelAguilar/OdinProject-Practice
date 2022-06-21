@@ -76,6 +76,9 @@ body{
     font-size:14px;
     margin-bottom:30px;
 }
+.form-row .checkbox-label{
+    margin-bottom:0;
+}
 
 /*Legacy styling for things that don't support flexbox*/
 .legacy-form-row{
@@ -129,6 +132,10 @@ body{
     }
     .form-row .instructions{
         margin-left:120px;
+    }
+    .form-row .checkbox-label{
+        margin-left:120px;
+        width:auto;
     }
 
     /*Layout for flexbox not supported*/
