@@ -41,7 +41,7 @@ body{
     margin:0 0 40px 0;
 }
 
-/*Text and email input*/
+/*General input layout*/
 .form-row{
     margin-bottom:40px;
     display:flex;
@@ -49,6 +49,7 @@ body{
     flex-direction:column;
     flex-wrap:wrap;
 }
+/*Text and email input*/
 .form-row input[type=text],.form-row input[type=email],select,textarea{
     background-color:#fff;
     border:1px solid #d6d9dc;
@@ -59,6 +60,21 @@ body{
 }
 .form-row label{
     margin-bottom:15px;
+}
+.form-row textarea{
+    font-family: Helvetica,Arial,sans-serif;  
+    font-size:14px;
+    border:1px solid #d6d9dc;
+    border-radius:3px;
+    min-height:200px;
+    margin-bottom:10px;
+    padding:7px;
+    resize:none;  
+}
+.form-row .instructions{
+    color:#999;
+    font-size:14px;
+    margin-bottom:30px;
 }
 
 /*Legacy styling for things that don't support flexbox*/
@@ -110,6 +126,9 @@ body{
         width:120px;
         margin-top:7px;
         padding-right:20pX;
+    }
+    .form-row .instructions{
+        margin-left:120px;
     }
 
     /*Layout for flexbox not supported*/
