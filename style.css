@@ -70,14 +70,17 @@ body{
 
 /*Create desktop layout*/
 @media only screen and (min-width:700px) {
+    /*Header*/
     .speaker-form-header,.speaker-form{
         width:600px;
     }
+    /*Form layout*/
     .form-row{
         flex-direction: row;
         align-items:flex-start; /*Avoid stretching*/
         margin-bottom:20px;
     }
+    /*inputs layout*/
     .form-row input[type=text],.form-row input[type=email]{
         width:250px;
         height:initial;
