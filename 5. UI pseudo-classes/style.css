@@ -1,3 +1,4 @@
+/*Design of input depending on wether it is optional or required*/
 input:required{
     border:1px solid black;
 }
@@ -5,6 +6,7 @@ input:optional{
     border:1px solid silver;
 }
 
+/*Show span that says "required"*/
 fieldset >div{
     margin-bottom: 20px;
     display:flex;
