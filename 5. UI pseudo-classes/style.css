@@ -69,3 +69,12 @@ input:valid+span::before{
     content:"✓";
     color:green;
 }
+
+/*Style when out of range*/
+input:out-of-range+span::after{
+    color:white;
+    background-color:red;
+    width:155px;
+    content:"Outside allowable value range";
+    left:-182px;
+}
