@@ -31,3 +31,20 @@ input:required+span::after{
     top:-26px;
     left:-70px;
 }
+
+/*Change when valid or invalid input*/
+input+span::before{
+    position:absolute;
+    right:-20px;
+}
+input:invalid{
+    border:2px solid red;
+}
+input:invalid + span::before{
+    content:"✖";
+    color:red;
+}
+input:valid+span::before{
+    content:"✓";
+    color:green;
+}
