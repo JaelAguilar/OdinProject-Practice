@@ -61,6 +61,26 @@ body{
     margin-bottom:15px;
 }
 
+/*Legacy styling for things that don't support flexbox*/
+.legacy-form-row{
+    border:none;
+    margin-bottom:40px;
+}
+.legacy-form-row legend{
+    margin-bottom:15px;
+}
+.legacy-form-row .radio-label{
+    display:block;
+    font-size:14px;
+    padding:0 20px 0 10px;
+}
+.legacy-form-row input[type=radio]{
+    margin-top:2px;
+}
+.legacy-form-row .radio-label,.legacy-form-row input[type=radio]{
+    float:left;
+}
+
 /*Input validation*/
 .form-row input[type=text]:invalid,.form-row input[type=email]:invalid{
     border:1px solid #d55c5f;
@@ -90,5 +110,16 @@ body{
         width:120px;
         margin-top:7px;
         padding-right:20pX;
+    }
+
+    /*Layout for flexbox not supported*/
+    .legacy-form-row{
+        margin-bottom: 10px;
+    }
+    .legacy-form-row legend{
+        width:120px;
+        text-align:right;
+        padding-right:20px;
+        float:left;
     }
 }
