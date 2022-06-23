@@ -1,0 +1,80 @@
+/*General style*/
+label{
+    width:100%;
+}
+legend {
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+button, label, input {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 97%;
+    padding: 5px;
+    height: 30px;
+}
+input {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+/*Design of input depending on wether it is optional or required*/
+input:required{
+    border:1px solid black;
+}
+input:optional{
+    border:1px solid silver;
+}
+
+/*Show span that says "required"*/
+fieldset >div{
+    margin-bottom: 20px;
+    display:flex;
+    flex-flow:row wrap;
+}
+
+input+span{
+    position:relative;
+}
+
+input:required+span::after{
+    font-size: 0.7rem;
+    position:absolute;
+    content:"required";
+    color:white;
+    background-color:black;
+    padding:5px 10px;
+    top:-26px;
+    left:-70px;
+}
+
+/*Change when valid or invalid input*/
+input+span::before{
+    position:absolute;
+    right:-20px;
+}
+input:invalid{
+    border:2px solid red;
+}
+input:invalid + span::before{
+    content:"✖";
+    color:red;
+}
+input:valid+span::before{
+    content:"✓";
+    color:green;
+}
+
+/*Style when out of range*/
+input:out-of-range+span::after{
+    color:white;
+    background-color:red;
+    width:155px;
+    content:"Outside allowable value range";
+    left:-182px;
+}
